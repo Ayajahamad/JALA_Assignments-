@@ -1,0 +1,3 @@
+In Python, 
+you can use the seek() method to move the file pointer to a specific position within a file, 
+which allows for random access.

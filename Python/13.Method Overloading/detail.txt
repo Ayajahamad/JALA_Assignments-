@@ -1,0 +1,59 @@
+Method overloading in Python is not supported in the traditional sense as it is in languages like Java or C++. In Python, you cannot define multiple methods with the same name but different parameters within a single class. The last defined method will overwrite any previously defined methods with the same name.
+
+However, you can achieve similar behavior using techniques such as default arguments, variable-length arguments (`*args` and `**kwargs`), or conditional logic within a single method to handle different types or numbers of arguments.
+
+Here’s a simple example demonstrating how to achieve method overloading-like behavior using default arguments:
+
+### Example Using Default Arguments
+
+```python
+class Example:
+    def display(self, a=None, b=None):
+        if a is not None and b is not None:
+            print(f"a: {a}, b: {b}")
+        elif a is not None:
+            print(f"a: {a}")
+        else:
+            print("No arguments passed")
+
+obj = Example()
+obj.display()          # No arguments passed
+obj.display(5)         # a: 5
+obj.display(5, 10)     # a: 5, b: 10
+```
+
+In this example, the `display` method can be called with different numbers of arguments due to the use of default values. The method checks which arguments are provided and performs different actions accordingly.
+
+### Example Using `*args` and `**kwargs`
+
+You can also use `*args` (for variable numbers of positional arguments) and `**kwargs` (for variable numbers of keyword arguments) to achieve similar functionality:
+
+```python
+class Example:
+    def display(self, *args, **kwargs):
+        if args and kwargs:
+            print(f"Positional arguments: {args}, Keyword arguments: {kwargs}")
+        elif args:
+            print(f"Positional arguments: {args}")
+        elif kwargs:
+            print(f"Keyword arguments: {kwargs}")
+        else:
+            print("No arguments passed")
+
+obj = Example()
+obj.display()                    # No arguments passed
+obj.display(1, 2, 3)             # Positional arguments: (1, 2, 3)
+obj.display(a=1, b=2)            # Keyword arguments: {'a': 1, 'b': 2}
+obj.display(1, 2, a=1, b=2)      # Positional arguments: (1, 2), Keyword arguments: {'a': 1, 'b': 2}
+```
+
+In this example, the `display` method can handle different numbers and types of arguments, providing a flexible way to simulate method overloading.
+
+### Summary
+
+- Python does not support traditional method overloading.
+- Use default arguments to handle different numbers of arguments.
+- Use `*args` and `**kwargs` to handle a variable number of positional and keyword arguments.
+- Implement conditional logic within the method to handle different scenarios based on the provided arguments.
+
+These techniques allow you to achieve method overloading-like behavior in Python, making your code more flexible and adaptable to different inputs.

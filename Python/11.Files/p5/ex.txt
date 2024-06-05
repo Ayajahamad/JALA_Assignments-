@@ -1,0 +1,5 @@
+Defines the index (index_to_seek) where you want to start reading the file.
+Opens the file ex.txt in read mode.
+Uses seek(index_to_seek) to move the file pointer to the specified index.
+Reads the content from the specified index onwards.
+Prints the content read from the specified index.

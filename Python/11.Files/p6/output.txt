@@ -1,0 +1,5 @@
+Imports the os module.
+Defines the file path (file_path) for which you want to check the permissions.
+Uses os.access(file_path, os.R_OK) to check if the file has read access.
+Uses os.access(file_path, os.W_OK) to check if the file has write access.
+Prints whether the file has read and write access.

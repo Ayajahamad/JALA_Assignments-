@@ -1,0 +1,36 @@
+If an interviewer asks how to achieve method overloading in Python, the answer would typically involve explaining that method overloading, as traditionally understood in languages like Java or C++, is not directly supported in Python. However, you can achieve similar behavior using various techniques such as:
+
+1. **Using Default Arguments**: Define a single method with default arguments to handle different numbers of parameters.
+
+    ```python
+    class Example:
+        def display(self, arg1, arg2=None):
+            if arg2 is None:
+                print(f"One argument: {arg1}")
+            else:
+                print(f"Two arguments: {arg1}, {arg2}")
+    ```
+
+2. **Using Variable-Length Arguments (`*args` and `**kwargs`)**: Define a single method that accepts variable numbers of arguments using `*args` and `**kwargs`.
+
+    ```python
+    class Example:
+        def display(self, *args):
+            if len(args) == 1:
+                print(f"One argument: {args[0]}")
+            elif len(args) == 2:
+                print(f"Two arguments: {args[0]}, {args[1]}")
+    ```
+
+3. **Using Conditional Logic**: Define a single method and implement conditional logic inside it to handle different cases based on the types or number of arguments provided.
+
+    ```python
+    class Example:
+        def display(self, *args):
+            if len(args) == 1 and isinstance(args[0], int):
+                print(f"One integer argument: {args[0]}")
+            elif len(args) == 2 and all(isinstance(arg, int) for arg in args):
+                print(f"Two integer arguments: {args[0]}, {args[1]}")
+    ```
+
+These techniques allow you to achieve flexibility in method calls and adaptability to different argument scenarios in Python, even though traditional method overloading is not directly supported. It's important to explain the reasoning behind Python's approach, which emphasizes simplicity and readability.
