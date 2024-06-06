@@ -1,0 +1,10 @@
+- The `required` attribute is used to make all fields mandatory.
+- The `minlength`, `maxlength`, and `min`, `max` attributes are applied to limit the length and value of certain fields.
+- The `autocomplete` attribute is used to specify that the browser should autocomplete the username field if possible.
+- The `placeholder` attribute provides hints to users about the expected format of the input.
+- The form is styled for better presentation using CSS.
+
+Regarding the difference between `target="_blank"` and `target="_self"`:
+
+- `target="_blank"`: This attribute specifies that the linked document should open in a new tab or window. This is typically used when you want to keep the current page intact and open the linked document separately.
+- `target="_self"`: This attribute specifies that the linked document should open in the same frame or tab as the current page. This is the default behavior if no target attribute is specified.

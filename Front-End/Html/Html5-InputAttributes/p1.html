@@ -1,0 +1,105 @@
+<!-- 1. Design the web page using all the below input attributes
+type =text, password, submit, reset, radio, checkbox, button,  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Types Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            /* display: block; */
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"], input[type="reset"], input[type="button"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+        input[type="button"] {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form with Various Input Types</h1>
+    <form>
+        <div class="form-group">
+            <label for="username">Username (Text):</label>
+            <input type="text" id="username" name="username">
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password (Password):</label>
+            <input type="password" id="password" name="password">
+        </div>
+        
+        <div class="form-group">
+            <label>Gender (Radio):</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        
+        <div class="form-group">
+            <label>Interests (Checkbox):</label>
+            <input type="checkbox" id="coding" name="interest" value="coding">
+            <label for="coding">Coding</label>
+            <input type="checkbox" id="music" name="interest" value="music">
+            <label for="music">Music</label>
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <input type="button" value="Click Me" onclick="alert('Button clicked!')">
+        </div>
+    </form>
+</body>
+</html>
+
+
+<!-- 
+Text Input (<input type="text">): Used for entering a single line of text.
+Password Input (<input type="password">): Used for entering a password, which will be obscured.
+Radio Buttons (<input type="radio">): Used for selecting one option from a group of choices.
+Checkboxes (<input type="checkbox">): Used for selecting multiple options from a group of choices.
+Submit Button (<input type="submit">): Submits the form data.
+Reset Button (<input type="reset">): Resets the form data to its initial state.
+Button (<input type="button">): A clickable button that can be programmed to perform an action using JavaScript. -->

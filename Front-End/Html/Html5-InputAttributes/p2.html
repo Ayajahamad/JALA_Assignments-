@@ -1,0 +1,136 @@
+<!-- 2. HTML5 input Types
+type=number, range, color, date, file, time, month, week, email -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Input Types Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="range"],
+        input[type="color"],
+        input[type="date"],
+        input[type="file"],
+        input[type="time"],
+        input[type="month"],
+        input[type="week"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="color"]{
+            height: 30px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML5 Input Types</h1>
+    <form>
+        <div class="form-group">
+            <label for="number">Number:</label>
+            <input type="number" id="number" name="number">
+        </div>
+
+        <div class="form-group">
+            <label for="range">Range:</label>
+            <input type="range" id="range" name="range" min="0" max="100">
+        </div>
+
+        <div class="form-group">
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="color">
+        </div>
+
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+        </div>
+
+        <div class="form-group">
+            <label for="file">File:</label>
+            <input type="file" id="file" name="file">
+        </div>
+
+        <div class="form-group">
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time">
+        </div>
+
+        <div class="form-group">
+            <label for="month">Month:</label>
+            <input type="month" id="month" name="month">
+        </div>
+
+        <div class="form-group">
+            <label for="week">Week:</label>
+            <input type="week" id="week" name="week">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>
+
+
+<!-- Number Input (<input type="number">): Used for entering numerical values.
+Range Input (<input type="range">): Used for selecting a value from a range.
+Color Input (<input type="color">): Used for selecting a color.
+Date Input (<input type="date">): Used for selecting a date.
+File Input (<input type="file">): Used for uploading files.
+Time Input (<input type="time">): Used for selecting a time.
+Month Input (<input type="month">): Used for selecting a month.
+Week Input (<input type="week">): Used for selecting a week.
+Email Input (<input type="email">): Used for entering an email address.
+Submit Button (<input type="submit">): Submits the form data.
+Reset Button (<input type="reset">): Resets the form data to its initial state. -->

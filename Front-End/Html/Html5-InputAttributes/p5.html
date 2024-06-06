@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrame and Marquee Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+        .marquee {
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <h1>IFrame and Marquee Example</h1>
+    
+    <!-- IFrame Example -->
+    <h2>IFrame Example</h2>
+    <iframe src="p3.html" frameborder="0"></iframe>
+    
+    <!-- Marquee Example -->
+    <h2>Marquee Example</h2>
+    <div class="marquee-container">
+        <div class="marquee">
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget metus vel tortor luctus ultrices.</span>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+ 1. `<iframe>`:
+
+The `<iframe>` (short for inline frame) element is used to embed another HTML document within the current HTML document. It allows you to display content from a different source or location seamlessly within your webpage. Here are some key points about `<iframe>`:
+
+- **Usage**: 
+  - `<iframe>` is used when you want to display content from another webpage, such as a map, video, or social media widget, directly within your webpage.
+  
+- **Attributes**:
+  - `src`: Specifies the URL of the document to be embedded.
+  - `width`, `height`: Sets the width and height of the iframe.
+  - `frameborder`: Specifies whether to display a border around the iframe. Usually set to `0` to remove the border.
+  
+- **Examples**:
+  ```html
+  <iframe src="https://www.example.com" width="500" height="300" frameborder="0"></iframe>
+  ```
+
+- **Considerations**:
+  - Security: Be cautious when embedding content from external sources to avoid security risks like cross-site scripting (XSS) attacks.
+  - Responsiveness: Ensure that the size of the iframe adapts well to different screen sizes for a responsive design.
+
+ 2. `<marquee>`:
+
+The `<marquee>` element was traditionally used to create a scrolling text or image effect within a webpage. However, it's deprecated in HTML5 due to accessibility and usability concerns. Despite being deprecated, it's worth understanding for historical purposes. Here are some points about `<marquee>`:
+
+- **Usage**:
+  - `<marquee>` is used to create a scrolling effect for text or images.
+  
+- **Attributes**:
+  - `direction`: Specifies the direction of the scrolling (`left`, `right`, `up`, or `down`).
+  - `behavior`: Defines the scrolling behavior (`scroll`, `slide`, or `alternate`).
+  - `scrollamount`: Sets the speed of the scrolling.
+  
+- **Example**:
+  ```html
+  <marquee direction="left" behavior="scroll" scrollamount="3">Scrolling text goes here</marquee>
+  ```
+
+- **Considerations**:
+  - Deprecated: `<marquee>` is deprecated in HTML5 and should be avoided in modern web development.
+  - Accessibility: Scrolling text can be distracting and may cause accessibility issues for users, especially those with cognitive or attention-related disabilities.
+  - Alternatives: For modern web development, CSS animations or JavaScript libraries are preferred for creating scrolling effects due to better accessibility and flexibility. -->
