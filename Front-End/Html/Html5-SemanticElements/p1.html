@@ -1,0 +1,60 @@
+<!-- 1. Develop a web page with non-semantic elements <div> and <span> -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Non-Semantic Elements Example</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            .container {
+                max-width: 800px;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+            }
+            .header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .content {
+                margin-bottom: 20px;
+            }
+            .footer {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .highlight {
+                color: #f00;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>This is a Header</h1>
+                <span class="highlight">With a Span Element</span>
+            </div>
+            <div class="content">
+                <p>This is some content within a <span class="highlight">div</span> element. It can contain any type of content such as text, images, videos, and other HTML elements.</p>
+                <div>This is another <span class="highlight">div</span> element nested inside the content.</div>
+            </div>
+            <div class="footer">
+                <p>This is a Footer</p>
+                <span class="highlight">With a Span Element</span>
+            </div>
+        </div>
+    </body>
+    </html>
+    
+
+<!-- 
+<div> elements are used to create logical divisions or sections within the webpage. They are versatile and can contain other HTML elements.
+<span> elements are used to apply styles or markup to a specific portion of text within a block-level element like a <div>. -->

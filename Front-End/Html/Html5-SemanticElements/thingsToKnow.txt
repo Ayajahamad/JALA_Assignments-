@@ -1,0 +1,36 @@
+**Difference between `<span>` and `<div>`:**
+
+`<span>` and `<div>` are both HTML elements used for grouping and applying styles to content, but they have different purposes and behaviors.
+
+1. **`<span>`**:
+   - `<span>` is an inline element, which means it does not start on a new line and only takes up as much width as necessary.
+   - It is typically used to apply styles to a specific portion of text or inline elements within a larger block of content.
+   - `<span>` does not create any visual changes by default. It's commonly used with CSS to apply formatting, such as changing text color, font size, or adding background color, to a small portion of text.
+
+2. **`<div>`**:
+   - `<div>` is a block-level element, which means it starts on a new line and takes up the full width available.
+   - It is used to group and separate sections of content, allowing you to apply styles or manipulate them as a whole.
+   - `<div>` is commonly used to create layout structures, such as defining the main content area, sidebars, headers, footers, etc.
+   - Unlike `<span>`, `<div>` can contain other block-level elements, such as `<p>`, `<h1>`, `<ul>`, etc.
+
+**Difference between HTML4 and HTML5 for specific tags:**
+
+1. **Header**:
+   - In HTML4, the `<header>` tag was not defined. Headers were typically created using `<div>` or `<h1>`-`<h6>` tags.
+   - In HTML5, the `<header>` tag was introduced to define introductory content or navigation links for a document or a section. It represents a container for introductory content or a set of navigation links.
+
+2. **Menu**:
+   - HTML4 did not have a specific `<menu>` tag for defining menus. Menus were typically created using lists (`<ul>` or `<ol>`) and styled using CSS.
+   - HTML5 introduced the `<menu>` tag, but it was later deprecated in HTML5.1 and should not be used. Instead, menus are typically created using lists (`<ul>` or `<ol>`) or navigation elements (`<nav>`) along with appropriate CSS.
+
+3. **Content**:
+   - HTML4 did not have a specific `<content>` tag. Content was typically defined using various block-level and inline elements such as `<div>`, `<p>`, `<span>`, etc.
+   - HTML5 introduced the `<content>` tag, which was later deprecated in favor of other mechanisms like `<slot>` and `<template>` for web component composition. It is no longer recommended for use.
+
+4. **Article**:
+   - In HTML4, there was no specific tag for defining independent, self-contained content pieces. Articles were typically marked up using `<div>` or other generic block-level elements.
+   - HTML5 introduced the `<article>` tag to define an independent, self-contained piece of content that could stand on its own. It is commonly used for blog posts, forum posts, news articles, etc.
+
+5. **Footer**:
+   - In HTML4, footers were typically created using `<div>` or `<p>` tags with appropriate styling.
+   - HTML5 introduced the `<footer>` tag to define a footer for a document or a section. It represents a container for footer content such as copyright information, contact details, etc.
