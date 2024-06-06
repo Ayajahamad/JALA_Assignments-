@@ -1,0 +1,19 @@
+1) Difference between HTML, HTML5, CSS and JAVA Script.
+2) Difference between span and div.
+
+HTML vs. HTML5 vs. CSS vs. JavaScript
+- **HTML**: Basic structure and content of web pages.
+- **HTML5**: Enhanced version of HTML with new elements and APIs for modern web development.
+- **CSS**: Styles and layouts for web pages.
+- **JavaScript**: Interactivity and dynamic content on web pages.
+
+`<span>` vs. `<div>`
+- **`<span>`**:
+  - Inline element.
+  - Groups inline content.
+  - Used for styling small pieces of text without affecting layout.
+
+- **`<div>`**:
+  - Block-level element.
+  - Groups block-level content.
+  - Used for structuring large sections and layouts on a web page.

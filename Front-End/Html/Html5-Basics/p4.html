@@ -1,0 +1,58 @@
+<!-- 4. Use pseudo classes and elements into your webpage -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes and Pseudo-elements Example</title>
+    <style>
+        /* Pseudo-class :hover */
+        a.link:hover {
+            color: red; /* Changes the color of the link when hovered */
+        }
+
+        /* Pseudo-class :first-child */
+        ul li:first-child {
+            font-weight: bold; /* Makes the first list item bold */
+        }
+
+        /* Pseudo-class :nth-child */
+        ul li:nth-child(2) {
+            color: blue; /* Changes the color of the second list item to blue */
+        }
+
+        /* Pseudo-element ::before */
+        h1::before {
+            content: "🌟 "; /* Adds a star before the heading */
+        }
+
+        /* Pseudo-element ::after */
+        h1::after {
+            content: " 🌟"; /* Adds a star after the heading */
+        }
+
+        /* Pseudo-element ::first-letter */
+        p::first-letter {
+            font-size: 2em; /* Makes the first letter of the paragraph larger */
+            color: green; /* Changes the color of the first letter to green */
+        }
+
+        /* Pseudo-element ::first-line */
+        p::first-line {
+            font-weight: bold; /* Makes the first line of the paragraph bold */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Webpage</h1>
+    <p class="intro">This is an introduction paragraph. Let's add some styles to it!</p>
+    <a href="#" class="link">Hover over this link</a>
+    <ul class="list">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+</body>
+</html>
