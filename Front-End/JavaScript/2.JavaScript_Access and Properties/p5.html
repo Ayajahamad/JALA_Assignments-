@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding more properties using object prototypes</title>
+</head>
+<body>
+    <script>
+        // Existing function constructor
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        // Adding more properties using object prototypes
+        Person.prototype.age = 0; // Additional property 'age'
+        Person.prototype.gender = 'unknown'; // Additional property 'gender'
+
+        // Creating an instance of Person
+        var johnDoe = new Person('John', 'Doe');
+
+        // Accessing the additional properties
+        console.log(johnDoe.age); // Output: 0
+        console.log(johnDoe.gender); // Output: unknown
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- 4. Create a Counter with the help of getter and setter accessors. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Getter and Setter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        #counter {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter with Getter and Setter</h1>
+    
+    <button onclick="counter.increment()">Increment</button>
+    <button onclick="counter.decrement()">Decrement</button>
+    
+    <div id="counter">0</div>
+
+    <script>
+        // Counter object with getter and setter accessors
+        var counter = {
+            _value: 0,
+            get value() {
+                return this._value;
+            },
+            set value(newValue) {
+                if (typeof newValue === 'number') {
+                    this._value = newValue;
+                } else {
+                    console.error("Value must be a number.");
+                }
+            },
+            increment: function() {
+                this.value++;
+                this.updateCounter();
+            },
+            decrement: function() {
+                this.value--;
+                this.updateCounter();
+            },
+            updateCounter: function() {
+                document.getElementById("counter").innerText = this.value;
+            }
+        };
+
+        // Initial update of the counter display
+        counter.updateCounter();
+    </script>
+</body>
+</html>

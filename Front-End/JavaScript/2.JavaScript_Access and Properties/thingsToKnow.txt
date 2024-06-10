@@ -1,0 +1,52 @@
+JavaScript has a variety of keywords and built-in functions that are fundamental to the language.
+
+### Keywords:
+1. **`break`**: Used to terminate a loop or switch statement.
+2. **`case`**: Used in a switch statement to specify different cases.
+3. **`catch`**: Used to handle exceptions in try...catch blocks.
+4. **`class`**: Defines a new class.
+5. **`const`**: Declares a constant variable.
+6. **`continue`**: Skips the current iteration of a loop.
+7. **`debugger`**: Stops the execution of JavaScript and calls the debugging function.
+8. **`default`**: Specifies the default case in a switch statement.
+9. **`delete`**: Deletes an object's property.
+10. **`do`**: Creates a do...while loop.
+11. **`else`**: Specifies the block of code to be executed if a condition is false.
+12. **`export`**: Used to export functions, objects, or primitives from a module.
+13. **`extends`**: Extends a class to create a subclass.
+14. **`false`**: Boolean value representing false.
+15. **`finally`**: Specifies a block of code to be executed after a try block.
+16. **`for`**: Creates a for loop.
+17. **`function`**: Declares a function.
+18. **`if`**: Creates an if statement.
+19. **`import`**: Used to import functions, objects, or primitives from a module.
+20. **`in`**: Checks if a property exists in an object.
+21. **`instanceof`**: Checks if an object is an instance of a specific class.
+22. **`let`**: Declares a block-scoped variable.
+23. **`new`**: Creates an instance of a constructor function.
+24. **`null`**: Represents the absence of any object value.
+25. **`return`**: Exits a function and specifies a value to be returned.
+26. **`super`**: Calls the constructor of the parent class.
+27. **`switch`**: Evaluates an expression and executes a block of code.
+28. **`this`**: Refers to the current object.
+29. **`throw`**: Throws an exception.
+30. **`true`**: Boolean value representing true.
+31. **`try`**: Implements error handling.
+32. **`typeof`**: Returns the type of a variable or expression.
+33. **`var`**: Declares a variable.
+34. **`void`**: Specifies that a function does not return a value.
+35. **`while`**: Creates a while loop.
+36. **`with`**: Extends the scope chain for a statement.
+37. **`yield`**: Pauses and resumes a generator function.
+
+### Existing Functions:
+1. **`parseInt()`**: Parses a string and returns an integer.
+2. **`parseFloat()`**: Parses a string and returns a floating-point number.
+3. **`isNaN()`**: Checks if a value is NaN (Not-a-Number).
+4. **`isNaN()`**: Checks if a value is NaN (Not-a-Number).
+5. **`alert()`**: Displays an alert dialog with a message.
+6. **`console.log()`**: Logs messages to the console.
+7. **`Date()`**: Creates a new Date object.
+8. **`String()`**: Converts a value to a string.
+9. **`Array()`**: Creates a new array object.
+10. **`Object()`**: Creates a new object.

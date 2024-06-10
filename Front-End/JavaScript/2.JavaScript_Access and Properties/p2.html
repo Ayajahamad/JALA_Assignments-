@@ -1,0 +1,54 @@
+<!-- 2. Invoke a function using call() and apply(). Also Spot the difference between them. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Invocation with call() and apply()</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .output {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Function Invocation with call() and apply()</h1>
+    
+    <button onclick="invokeWithCall()">Invoke with call()</button>
+    <button onclick="invokeWithApply()">Invoke with apply()</button>
+
+    <div id="output" class="output"></div>
+
+    <script>
+        function myFunction(arg1, arg2) {
+            return "Arguments: " + arg1 + ", " + arg2;
+        }
+
+        function invokeWithCall() {
+            var result = myFunction.call(this, "Hello", "World");
+            displayOutput(result);
+        }
+
+        function invokeWithApply() {
+            var result = myFunction.apply(this, ["Hello", "World"]);
+            displayOutput(result);
+        }
+
+        function displayOutput(result) {
+            document.getElementById("output").innerText = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
