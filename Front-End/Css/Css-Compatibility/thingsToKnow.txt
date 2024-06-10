@@ -1,0 +1,71 @@
+### 1. Understanding Table Structure:
+
+Tables in HTML are structured using the `<table>`, `<tr>`, `<th>`, and `<td>` elements.
+
+- `<table>`: Defines a table.
+- `<tr>`: Defines a row in the table.
+- `<th>`: Defines a header cell in the table. By default, the content of `<th>` is bold and centered.
+- `<td>`: Defines a standard data cell in the table.
+
+Example:
+```html
+<table>
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+  </tr>
+  <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+</table>
+```
+
+### 2. Cell Padding and Cell Spacing:
+
+- Cell Padding: It defines the space between the content of a cell and its border.
+  ```html
+  <table cellpadding="10">
+  ```
+  In CSS:
+  ```css
+  table {
+      border-collapse: collapse; /* Remove default cell spacing */
+  }
+  td {
+      padding: 10px; /* Apply padding to all cells */
+  }
+  ```
+
+- Cell Spacing: It defines the space between cells.
+  ```html
+  <table cellspacing="10">
+  ```
+  In CSS, cell spacing is controlled by the `border-spacing` property:
+  ```css
+  table {
+      border-spacing: 10px; /* Apply spacing between cells */
+  }
+  ```
+
+### 3. Form Attributes:
+
+Forms in HTML allow users to input data. They are created using the `<form>` element and contain various form controls like `<input>`, `<textarea>`, `<select>`, etc. Form controls can have attributes to specify their behavior and appearance.
+
+Common form attributes include:
+- action: Specifies where to send the form data when submitted.
+- method: Defines how form data should be submitted (GET or POST).
+- name: Assigns a name to the form.
+- target: Specifies where to open the response from the server (e.g., in a new window).
+- autocomplete: Controls whether a form should have autocomplete enabled or disabled.
+- enctype: Specifies how form data should be encoded before sending it to the server (e.g., `multipart/form-data` for file uploads).
+- novalidate: Prevents form validation when submitted.
+
+Example:
+```html
+<form action="/submit" method="post" enctype="multipart/form-data">
+  <input type="text" name="username" placeholder="Username" autocomplete="off" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <button type="submit">Submit</button>
+</form>
+```

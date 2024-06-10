@@ -1,0 +1,93 @@
+<!-- 3. Create a grid with of different types -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        .container {
+            margin-bottom: 40px;
+        }
+        .grid {
+            display: grid;
+            gap: 10px;
+        }
+        .simple-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .nested-grid {
+            grid-template-columns: 1fr 2fr;
+        }
+        .nested-grid .nested {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+        .responsive-grid {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+        .grid-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            border: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Grid Examples</h1>
+        <p>This page demonstrates different types of CSS grids, including a simple grid, a nested grid, and a responsive grid.</p>
+    </div>
+    
+    <div class="container">
+        <h2>Simple Grid</h2>
+        <div class="grid simple-grid">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+        <p>This grid uses <code>grid-template-columns: repeat(3, 1fr);</code> to create three equal-width columns.</p>
+    </div>
+
+    <div class="container">
+        <h2>Nested Grid</h2>
+        <div class="grid nested-grid">
+            <div class="grid-item">1</div>
+            <div class="grid-item nested">
+                <div class="grid-item">2.1</div>
+                <div class="grid-item">2.2</div>
+                <div class="grid-item">2.3</div>
+                <div class="grid-item">2.4</div>
+            </div>
+        </div>
+        <p>This grid has a nested grid inside the second grid item. The outer grid uses <code>grid-template-columns: 1fr 2fr;</code> and the nested grid uses <code>grid-template-columns: 1fr 1fr;</code>.</p>
+    </div>
+
+    <div class="container">
+        <h2>Responsive Grid</h2>
+        <div class="grid responsive-grid">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+        <p>This grid uses <code>grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));</code> to create a responsive layout that adjusts based on the available width.</p>
+    </div>
+</body>
+</html>

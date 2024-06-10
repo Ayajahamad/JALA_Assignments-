@@ -1,0 +1,97 @@
+<!-- 1. Create a table and apply table-layout as fixed and none -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            margin-bottom: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .fixed-table {
+            table-layout: fixed;
+        }
+        .auto-table {
+            table-layout: auto;
+        }
+        .fixed-table th, .fixed-table td {
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Table Layout Example</h1>
+        <p>The <code>table-layout</code> property defines the layout algorithm used to arrange cells, rows, and columns in a table. The two common values are <code>fixed</code> and <code>auto</code>.</p>
+    </div>
+    
+    <div class="container">
+        <h2>Table Layout: Fixed</h2>
+        <table class="fixed-table">
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>This is some text that will demonstrate how fixed table layout works. It should truncate or wrap based on the column width.</td>
+                    <td>Short text</td>
+                    <td>Another example with a bit longer text to see the effect.</td>
+                </tr>
+                <tr>
+                    <td>Short text</td>
+                    <td>This is another long text in a different column to show the fixed layout behavior.</td>
+                    <td>Short text</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>With <code>table-layout: fixed</code>, the table and column widths are set by the widths of the table and the widths of the columns, regardless of the content inside the cells. It allows for a more predictable layout.</p>
+    </div>
+
+    <div class="container">
+        <h2>Table Layout: Auto</h2>
+        <table class="auto-table">
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>This is some text that will demonstrate how auto table layout works. The column width should adjust based on the content.</td>
+                    <td>Short text</td>
+                    <td>Another example with a bit longer text to see the effect.</td>
+                </tr>
+                <tr>
+                    <td>Short text</td>
+                    <td>This is another long text in a different column to show the auto layout behavior.</td>
+                    <td>Short text</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>With <code>table-layout: auto</code> (the default), the column widths are determined by the content inside the cells. The table will adjust the width of columns based on the content, making it more flexible but less predictable.</p>
+    </div>
+</body>
+</html>
