@@ -1,0 +1,43 @@
+<!-- 1. Add an event listener to a button. When we click on it it should display current date 
+and time. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date and Time Display</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #display {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Date and Time Display</h1>
+<button id="displayButton">Show Date and Time</button>
+<div id="display"></div>
+
+<script>
+    // Function to display current date and time
+    function displayDateTime() {
+        // Get current date and time
+        var currentDate = new Date();
+        // Format the date and time
+        var formattedDateTime = currentDate.toLocaleString();
+        // Display the formatted date and time
+        document.getElementById('display').innerText = formattedDateTime;
+    }
+
+    // Add event listener to the button
+    document.getElementById('displayButton').addEventListener('click', displayDateTime);
+</script>
+
+</body>
+</html>

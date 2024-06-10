@@ -1,0 +1,80 @@
+<!-- 4. Write functions to set a cookie, get a cookie and check a cookie in a single program. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Management</title>
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Function to check if a cookie exists
+        function checkCookie(name) {
+            const cookie = getCookie(name);
+            if (cookie) {
+                alert("Cookie " + name + " is set. Value: " + cookie);
+            } else {
+                alert("Cookie " + name + " is not set.");
+            }
+        }
+
+        // Function to set a cookie via button click
+        function setCookieFromInput() {
+            const name = document.getElementById("cookieName").value;
+            const value = document.getElementById("cookieValue").value;
+            const days = document.getElementById("cookieDays").value;
+            setCookie(name, value, days);
+            alert("Cookie set: " + name + "=" + value);
+        }
+
+        // Function to check a cookie via button click
+        function checkCookieFromInput() {
+            const name = document.getElementById("checkCookieName").value;
+            checkCookie(name);
+        }
+    </script>
+</head>
+<body>
+    <h1>Cookie Management</h1>
+
+    <h2>Set Cookie</h2>
+    <label for="cookieName">Cookie Name:</label>
+    <input type="text" id="cookieName" name="cookieName">
+    <br>
+    <label for="cookieValue">Cookie Value:</label>
+    <input type="text" id="cookieValue" name="cookieValue">
+    <br>
+    <label for="cookieDays">Expiry Days:</label>
+    <input type="number" id="cookieDays" name="cookieDays">
+    <br>
+    <button onclick="setCookieFromInput()">Set Cookie</button>
+
+    <h2>Check Cookie</h2>
+    <label for="checkCookieName">Cookie Name:</label>
+    <input type="text" id="checkCookieName" name="checkCookieName">
+    <br>
+    <button onclick="checkCookieFromInput()">Check Cookie</button>
+</body>
+</html>

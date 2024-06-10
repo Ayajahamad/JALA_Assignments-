@@ -1,0 +1,58 @@
+<!-- 3. How console.log() can be used for Debugging. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debugging with console.log()</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    h1, h2 {
+        color: #007bff;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Debugging with console.log()</h1>
+
+<h2>Introduction</h2>
+<p>Debugging is the process of identifying and fixing errors or bugs in your code. One of the most commonly used debugging techniques in JavaScript is using the <code>console.log()</code> method.</p>
+
+<h2>How to Use <code>console.log()</code> for Debugging</h2>
+<p>The <code>console.log()</code> method is used to log messages, objects, or variables to the console. This allows you to inspect the state of your code at different points during execution, helping you understand how your code is behaving and identify any issues.</p>
+<p>Here's how you can use <code>console.log()</code> for debugging:</p>
+<ol>
+    <li><strong>Logging Variables:</strong> You can log the value of variables to the console to check their current state. For example:</li>
+    <pre><code>var x = 10;
+console.log(x); // Output: 10</code></pre>
+    <li><strong>Logging Objects:</strong> You can log entire objects to the console to inspect their properties and values. For example:</li>
+    <pre><code>var person = { name: 'John', age: 30 };
+console.log(person); // Output: { name: 'John', age: 30 }</code></pre>
+    <li><strong>Logging Messages:</strong> You can log custom messages to provide context or indicate specific points in your code. For example:</li>
+    <pre><code>console.log('Starting function...');
+// Code for the function...
+console.log('Function execution complete.');</code></pre>
+</ol>
+
+<h2>Using <code>console.log()</code> Effectively</h2>
+<p>Here are some tips for using <code>console.log()</code> effectively:</p>
+<ul>
+    <li><strong>Use Descriptive Messages:</strong> When logging messages, use descriptive text to clearly indicate the purpose or context of the log.</li>
+    <li><strong>Log Frequently:</strong> Log frequently at different points in your code to understand its flow and identify potential issues.</li>
+    <li><strong>Use with Conditional Statements:</strong> Use <code>console.log()</code> within conditional statements to log information based on specific conditions.</li>
+    <li><strong>Group Log Messages:</strong> Use <code>console.group()</code> and <code>console.groupEnd()</code> to group related log messages together and organize your debugging output.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p><code>console.log()</code> is a powerful tool for debugging JavaScript code. By logging variables, objects, and messages to the console, you can gain insights into your code's behavior and quickly identify and fix errors.</p>
+
+</body>
+</html>

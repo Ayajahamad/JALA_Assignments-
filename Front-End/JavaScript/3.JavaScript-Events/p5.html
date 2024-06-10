@@ -1,0 +1,24 @@
+<!-- 5. Create a JSON object and access it using dot notation. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Object</title>
+</head>
+<body>
+    <script>
+        // JSON string representing a person object
+        var jsonPerson = '{"name": "John", "age": 30, "address": {"street": "123 Main St", "city": "Anytown"}}';
+
+        // Parse the JSON string into a JavaScript object
+        var person = JSON.parse(jsonPerson);
+
+        // Access properties using dot notation
+        console.log(person.name); // Output: John
+        console.log(person.age); // Output: 30
+        console.log(person.address.street); // Output: 123 Main St
+        console.log(person.address.city); // Output: Anytown
+    </script>
+</body>
+</html>
