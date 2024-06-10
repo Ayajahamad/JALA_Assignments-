@@ -1,0 +1,86 @@
+<!-- 4. Add padding and margin with different size and understand the difference between 
+them. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding and Margin Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: #3498db;
+            color: white;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #2980b9;
+        }
+
+        .box-1 {
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .box-2 {
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .box-3 {
+            margin: 30px;
+            padding: 30px;
+        }
+
+        .box-4 {
+            margin: 5px 15px 25px 35px; /* top right bottom left */
+            padding: 10px 20px 30px 40px; /* top right bottom left */
+        }
+
+        .box-5 {
+            margin: 0 auto; /* Centering the element horizontally */
+            padding: 15px;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Understanding Padding and Margin</h1>
+
+    <div class="box box-1">
+        <h2>Box 1</h2>
+        <p>This box has a margin of 20px and padding of 10px.</p>
+    </div>
+
+    <div class="box box-2">
+        <h2>Box 2</h2>
+        <p>This box has a margin of 10px and padding of 20px.</p>
+    </div>
+
+    <div class="box box-3">
+        <h2>Box 3</h2>
+        <p>This box has a margin of 30px and padding of 30px.</p>
+    </div>
+
+    <div class="box box-4">
+        <h2>Box 4</h2>
+        <p>This box has different margin and padding sizes for each side (top, right, bottom, left).</p>
+    </div>
+
+    <div class="box box-5">
+        <h2>Box 5</h2>
+        <p>This box has auto margin on the left and right to center it horizontally and padding of 15px.</p>
+    </div>
+
+    <p>The examples above illustrate the difference between padding and margin:</p>
+    <ul>
+        <li><strong>Padding:</strong> The space inside the element, between the element's content and its border.</li>
+        <li><strong>Margin:</strong> The space outside the element, between the element's border and the next adjacent element.</li>
+    </ul>
+</body>
+</html>

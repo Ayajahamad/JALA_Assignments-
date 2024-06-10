@@ -1,0 +1,74 @@
+<!-- 5. A page with multiple background images for an webpage or element and define their 
+adjustable sizes -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Background Images Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* Background images with adjustable sizes */
+        .bg-image-1 {
+            background-image: url('htmlbg.jpg');
+            background-size: cover;
+            height: 300px;
+        }
+
+        .bg-image-2 {
+            background-image: url('htmlbg.jpg');
+            background-size: contain;
+            height: 200px;
+        }
+
+        .bg-image-3 {
+            background-image: url('htmlbg.jpg');
+            background-size: 50% auto;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Multiple Background Images Example</h1>
+        
+        <div class="section bg-image-1">
+            <h2>Background Image 1 (Cover)</h2>
+            <p>This background image covers the entire element.</p>
+        </div>
+
+        <div class="section bg-image-2">
+            <h2>Background Image 2 (Contain)</h2>
+            <p>This background image is contained within the element.</p>
+        </div>
+
+        <div class="section bg-image-3">
+            <h2>Background Image 3 (50% Width)</h2>
+            <p>This background image covers 50% of the element's width.</p>
+        </div>
+    </div>
+</body>
+</html>

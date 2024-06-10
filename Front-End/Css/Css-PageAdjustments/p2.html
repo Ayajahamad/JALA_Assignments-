@@ -1,0 +1,88 @@
+<!-- 2. Apply different visibility by an element (visibility: hidden, visible, collapse) and use 
+different types of display for an element (display: none, inline, block, contents, list-item) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and Display Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        /* Visibility examples */
+        .hidden-element {
+            visibility: hidden;
+        }
+
+        .visible-element {
+            visibility: visible;
+        }
+
+        .collapse-element {
+            visibility: collapse;
+        }
+
+        /* Display examples */
+        .none-element {
+            display: none;
+        }
+
+        .inline-element {
+            display: inline;
+            background-color: #d1ecf1;
+            padding: 5px;
+        }
+
+        .block-element {
+            display: block;
+            background-color: #f8d7da;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contents-element {
+            display: contents;
+        }
+
+        .list-item-element {
+            display: list-item;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visibility and Display Examples</h1>
+    
+    <div class="section">
+        <h2>Visibility Examples</h2>
+        <p class="hidden-element">This paragraph is hidden (visibility: hidden).</p>
+        <p class="visible-element">This paragraph is visible (visibility: visible).</p>
+        <p class="collapse-element">This paragraph is collapsed (visibility: collapse). Note: Collapse is mostly used with table elements.</p>
+    </div>
+
+    <div class="section">
+        <h2>Display Examples</h2>
+        <p class="none-element">This paragraph is not displayed (display: none).</p>
+        <p class="inline-element">This is an inline element (display: inline).</p>
+        <p class="block-element">This is a block element (display: block).</p>
+        <div class="block-element">This is another block element (display: block).</div>
+        <p class="contents-element">This is a contents element (display: contents).</p>
+        
+        <p class="list-item-element">This is a list item element (display: list-item).</p>
+        <p class="list-item-element">Another list item element (display: list-item).</p>
+        
+    </div>
+</body>
+</html>

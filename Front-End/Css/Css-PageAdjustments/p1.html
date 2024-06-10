@@ -1,0 +1,105 @@
+<!-- 1. A page which specify a black border for table and if hover on it, page should change 
+it's colour. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Hover Effect</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table styles */
+        table {
+            border: 4px solid black;
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            transition: border-color 0.3s; 
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        /* Change border color on hover */
+        table:hover {
+            border-color: red; /* Change border color to red when hovering over the table */
+        }
+
+        /* Header cell styles */
+        th {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        /* Alternate row background colors */
+        tr:nth-child(even) {
+            background-color: #eaeaea;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #d8d8d8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Directory</h1>
+        <table>
+            <tr>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Anna Lee</td>
+                <td>Marketing</td>
+                <td>San Francisco</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Mark Smith</td>
+                <td>Sales</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Linda Johnson</td>
+                <td>HR</td>
+                <td>Chicago</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>James Williams</td>
+                <td>Engineering</td>
+                <td>Seattle</td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Patricia Brown</td>
+                <td>Finance</td>
+                <td>Boston</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+

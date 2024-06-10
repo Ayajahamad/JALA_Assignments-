@@ -1,0 +1,72 @@
+1. Difference between `visibility:hidden` and `display:none`:
+
+   - `visibility: hidden;`: This CSS property makes the element invisible, but it still takes up space in the layout. The element is hidden, but the space it occupies remains.
+
+   - `display: none;`: This CSS property removes the element from the document layout entirely. It is as if the element does not exist on the page. The element does not take up any space.
+
+   Example:
+   ```html
+   <style>
+     .hidden { visibility: hidden; }
+     .none { display: none; }
+   </style>
+   <div class="hidden">This is hidden but still occupies space.</div>
+   <div class="none">This is not displayed and does not occupy space.</div>
+   ```
+
+2. Difference between inline and block level elements:
+
+   - Inline elements: These elements do not start on a new line and only take up as much width as necessary. Examples include `<span>`, `<a>`, and `<img>`. They can be placed within block-level elements and other inline elements.
+
+   - Block-level elements: These elements start on a new line and take up the full width available. Examples include `<div>`, `<p>`, `<h1>`-`<h6>`, and `<ul>`. They can contain both block-level and inline elements.
+
+   Example:
+   ```html
+   <div>
+     <p>This is a block-level element.</p>
+     <span>This is an inline element within a block-level element.</span>
+   </div>
+   ```
+
+3. What are selectors?
+
+   Selectors are patterns used in CSS to select the elements you want to style. They can be based on element names, classes, IDs, attributes, and more. Here are a few examples:
+
+   - Type Selector: Selects all elements of a given type.
+     ```css
+     p {
+       color: blue;
+     }
+     ```
+
+   - Class Selector: Selects all elements with a specific class.
+     ```css
+     .my-class {
+       color: green;
+     }
+     ```
+
+   - ID Selector: Selects a single element with a specific ID.
+     ```css
+     #my-id {
+       color: red;
+     }
+     ```
+
+   - Attribute Selector: Selects elements based on an attribute or attribute value.
+     ```css
+     a[target="_blank"] {
+       color: orange;
+     }
+     ```
+
+4. Which property is used to set the line style for the outline?
+
+   The property used to set the line style for the outline is `outline-style`. This property can take values like `none`, `solid`, `dotted`, `dashed`, `double`, `groove`, `ridge`, `inset`, and `outset`.
+
+   Example:
+   ```css
+   .outlined {
+     outline-style: dashed;
+   }
+   ```
