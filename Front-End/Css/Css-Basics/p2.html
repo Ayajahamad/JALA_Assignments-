@@ -1,0 +1,61 @@
+<!-- 2. Create a page with different background-colour of a page and set an image as the 
+background-image of a page (image should not scroll with the rest of the page and 
+specify the size of a background image) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Example</title>
+    <style>
+        /* Background color for the body */
+        body {
+            background-color: #f0f0f0; /* Default background color */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        /* Background image */
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('htmlbg.jpg'); /* Path to your image */
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Fixed position */
+            z-index: -1; /* Ensure the image is behind other content */
+        }
+
+        /* Content styles */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Different background color for a specific section */
+        .section-with-color {
+            background-color: #ccc; /* Light gray background color */
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>This is an example of a page with different background colors and a background image.</p>
+        <div class="section-with-color">
+            <h2>Section with Different Background Color</h2>
+            <p>This section has a light gray background color.</p>
+        </div>
+    </div>
+</body>
+</html>

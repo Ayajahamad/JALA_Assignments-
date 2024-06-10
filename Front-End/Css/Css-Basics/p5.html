@@ -1,0 +1,83 @@
+<!-- 5. Develop a page with different font-styles, font-size, font-family, colors and text-align. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Styles Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Header styles */
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Paragraph styles */
+        .normal-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            color: #000;
+            text-align: left;
+        }
+
+        .italic-text {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            color: #007bff;
+            text-align: right;
+            font-style: italic;
+        }
+
+        .bold-text {
+            font-family: 'Verdana', sans-serif;
+            font-size: 20px;
+            color: #28a745;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .underline-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 22px;
+            color: #dc3545;
+            text-align: justify;
+            text-decoration: underline;
+        }
+
+        .uppercase-text {
+            font-family: 'Tahoma', sans-serif;
+            font-size: 24px;
+            color: #6f42c1;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        .small-caps-text {
+            font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
+            font-size: 26px;
+            color: #ffc107;
+            text-align: right;
+            font-variant: small-caps;
+        }
+    </style>
+</head>
+<body>
+    <h1>Font Styles Example</h1>
+    <p class="normal-text">This is a normal text paragraph with default styling.</p>
+    <p class="italic-text">This paragraph is right-aligned and italicized with a different font and color.</p>
+    <p class="bold-text">This paragraph is center-aligned and bold with a different font and color.</p>
+    <p class="underline-text">This paragraph is justified and underlined with a different font and color.</p>
+    <p class="uppercase-text">This paragraph is left-aligned and uppercase with a different font and color.</p>
+    <p class="small-caps-text">This paragraph is right-aligned and uses small-caps with a different font and color.</p>
+</body>
+</html>

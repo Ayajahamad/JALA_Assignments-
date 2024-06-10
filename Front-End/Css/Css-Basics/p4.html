@@ -1,0 +1,67 @@
+<!-- 4. Develop a page and set the height:(in pixels and %) and width:(in pixels and %) on 
+elements. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height and Width Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Container div with percentage-based height and width */
+        .container {
+            width: 80%; /* 80% of the viewport width */
+            height: 60vh; /* 60% of the viewport height */
+            background-color: #956868;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Box with fixed pixel height and width */
+        .box-pixel {
+            width: 300px; /* Fixed width in pixels */
+            height: 200px; /* Fixed height in pixels */
+            background-color: #007bff;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        /* Box with percentage-based height and width */
+        .box-percentage {
+            width: 50%; /* 50% of the parent container's width */
+            height: 50%; /* 50% of the parent container's height */
+            background-color: #28a745;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-pixel">
+            Fixed Size Box (300px x 200px)
+        </div>
+        <div class="box-percentage">
+            Percentage Size Box (50% x 50%)
+        </div>
+    </div>
+</body>
+</html>
