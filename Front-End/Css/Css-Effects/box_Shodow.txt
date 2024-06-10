@@ -1,0 +1,98 @@
+### Syntax
+
+```css
+box-shadow: h-offset v-offset blur spread color inset;
+```
+
+### Values
+
+1. Horizontal Offset (`h-offset`):
+   - Defines the horizontal distance of the shadow.
+   - Positive values move the shadow to the right.
+   - Negative values move the shadow to the left.
+
+2. Vertical Offset (`v-offset`):
+   - Defines the vertical distance of the shadow.
+   - Positive values move the shadow down.
+   - Negative values move the shadow up.
+
+3. Blur Radius (`blur`):
+   - Defines the blur radius. The higher the number, the more blurred the shadow will be.
+   - Optional value. Default is `0` (sharp shadow).
+   - Cannot be negative.
+
+4. Spread Radius (`spread`):
+   - Defines the spread radius. Positive values cause the shadow to expand and grow bigger, while negative values cause it to shrink.
+   - Optional value. Default is `0`.
+
+5. Color:
+   - Defines the color of the shadow.
+   - Can use any valid CSS color value (e.g., hex, RGB, RGBA, HSL, HSLA, named colors).
+
+6. Inset:
+   - If specified, the shadow is drawn inside the border (inner shadow). Default value is `outset` (outer shadow).
+   - Optional value.
+
+### Examples
+
+#### Simple Shadow
+
+```css
+box-shadow: 10px 10px; /* 10px to the right and 10px down */
+```
+
+#### Shadow with Blur
+
+```css
+box-shadow: 10px 10px 5px; /* 10px to the right, 10px down, 5px blur */
+```
+
+#### Shadow with Blur and Spread
+
+```css
+box-shadow: 10px 10px 5px 2px; /* 10px to the right, 10px down, 5px blur, 2px spread */
+```
+
+#### Shadow with Color
+
+```css
+box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.5); /* 10px to the right, 10px down, 5px blur, 2px spread, semi-transparent black */
+```
+
+#### Inset Shadow
+
+```css
+box-shadow: inset 10px 10px 5px 2px rgba(0, 0, 0, 0.5); /* inset shadow */
+```
+
+### Full Example
+
+Here's an example that combines all the values:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Shadow Example</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: #e0e0e0;
+      margin: 50px auto;
+      box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .box.inset {
+      box-shadow: inset 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="box inset"></div>
+</body>
+</html>
+```

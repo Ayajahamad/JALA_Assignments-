@@ -1,0 +1,128 @@
+<!-- 2. Use CSS animations (name,duration,iteration-count & delay) and 
+paginations(Hoverable,with and without spaces). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animations and Pagination</title>
+  <style>
+    /* Basic Styles */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* Animation Styles */
+    .animated-box {
+      width: 100px;
+      height: 100px;
+      background-color: #4CAF50;
+      margin-bottom: 20px;
+      animation-name: moveBox;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+    }
+
+    @keyframes moveBox {
+      0% { 
+        transform: translateX(-200px); 
+        background-color: #3daa41;
+      }
+      50% { 
+        transform: translateX(200px);
+        background-color: #6c956e;
+      }
+      100% { 
+        transform: translateX(-200px); 
+        background-color: #3daa41;
+      }
+    }
+
+    /* Pagination Styles */
+    .pagination {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+
+    .pagination li {
+      margin: 0 5px;
+    }
+
+    .pagination a {
+      text-decoration: none;
+      color: #000;
+      padding: 8px 16px;
+      border: 1px solid #ddd;
+      transition: background-color 0.3s;
+    }
+
+    .pagination a:hover {
+      background-color: #4CAF50;
+      color: #fff;
+    }
+
+    /* Pagination Without Spaces */
+    .pagination-no-space {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+
+    .pagination-no-space li {
+      margin: 0;
+    }
+
+    .pagination-no-space a {
+      text-decoration: none;
+      color: #000;
+      padding: 8px 16px;
+      border: 1px solid #ddd;
+      transition: background-color 0.3s;
+    }
+
+    .pagination-no-space a:hover {
+      background-color: #4CAF50;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Animations and Pagination</h1>
+
+  <!-- Animated Box -->
+  <div class="animated-box"></div>
+
+  <!-- Pagination With Spaces -->
+  <ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
+
+  <!-- Pagination Without Spaces -->
+  <ul class="pagination-no-space">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!-- 5. Adding Opacity to a image -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Opacity to an Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-bottom: 40px;
+        }
+        .image-container {
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+        }
+        .opacity-100 {
+            opacity: 1; /* Fully opaque */
+        }
+        .opacity-75 {
+            opacity: 0.75; /* 75% opaque */
+        }
+        .opacity-50 {
+            opacity: 0.5; /* 50% opaque */
+        }
+        .opacity-25 {
+            opacity: 0.25; /* 25% opaque */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Adding Opacity to an Image</h1>
+        <p>In CSS, the <code>opacity</code> property is used to set the opacity level for an element. The value can range from 0 (completely transparent) to 1 (completely opaque).</p>
+    </div>
+    
+    <div class="container">
+        <h2>Fully Opaque Image (Opacity 1)</h2>
+        <div class="image-container">
+            <img src="htmlbg.jpg" alt="Sample Image" class="opacity-100">
+        </div>
+        <p>This image is fully opaque with an opacity value of 1.</p>
+    </div>
+
+    <div class="container">
+        <h2>75% Opaque Image (Opacity 0.75)</h2>
+        <div class="image-container">
+            <img src="htmlbg.jpg" alt="Sample Image" class="opacity-75">
+        </div>
+        <p>This image is 75% opaque with an opacity value of 0.75.</p>
+    </div>
+
+    <div class="container">
+        <h2>50% Opaque Image (Opacity 0.5)</h2>
+        <div class="image-container">
+            <img src="htmlbg.jpg" alt="Sample Image" class="opacity-50">
+        </div>
+        <p>This image is 50% opaque with an opacity value of 0.5.</p>
+    </div>
+
+    <div class="container">
+        <h2>25% Opaque Image (Opacity 0.25)</h2>
+        <div class="image-container">
+            <img src="htmlbg.jpg" alt="Sample Image" class="opacity-25">
+        </div>
+        <p>This image is 25% opaque with an opacity value of 0.25.</p>
+    </div>
+</body>
+</html>

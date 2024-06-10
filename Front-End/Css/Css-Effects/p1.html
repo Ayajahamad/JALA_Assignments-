@@ -1,0 +1,43 @@
+<!-- 1. Apply CSS shadow effects like for image box and hover a cursor. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Shadow Effects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    .image-box {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: 1s ease-in-out;
+    }
+    /* box-shadow: h-offset v-offset blur spread color inset; */
+    .image-box:hover {
+      box-shadow: 10px 8px 16px 5px rgba(0, 0, 0, 0.2) inset;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-box">
+    <img src="https://via.placeholder.com/300" alt="Sample Image">
+  </div>
+</body>
+</html>

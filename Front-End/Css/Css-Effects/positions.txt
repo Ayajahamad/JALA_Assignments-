@@ -1,0 +1,97 @@
+### 1. Static Positioning
+This is the default positioning for HTML elements. A statically positioned element is not affected by the `top`, `bottom`, `left`, or `right` properties.
+
+```css
+.element {
+    position: static;
+}
+```
+
+- Behavior: The element follows the normal flow of the document.
+
+### 2. Relative Positioning
+A relatively positioned element is positioned relative to its normal position. The `top`, `right`, `bottom`, and `left` properties will cause it to be adjusted from its normal position.
+
+```css
+.element {
+    position: relative;
+    top: 10px; /* Moves the element 10px down from its original position */
+    left: 20px; /* Moves the element 20px to the right from its original position */
+}
+```
+
+- Behavior: The element remains in the flow of the document, and the space originally occupied by the element is preserved.
+
+### 3. Fixed Positioning
+A fixed positioned element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+
+```css
+.element {
+    position: fixed;
+    top: 0; /* Positions the element at the top of the viewport */
+    right: 0; /* Positions the element at the right of the viewport */
+}
+```
+
+- Behavior: The element is removed from the document flow and does not leave a gap where it would have been located.
+
+### 4. Absolute Positioning
+An absolutely positioned element is positioned relative to the nearest positioned ancestor (an ancestor with `position` other than `static`), or if there isn't one, it is positioned relative to the initial containing block (usually the `<html>` element).
+
+```css
+.container {
+    position: relative;
+}
+
+.element {
+    position: absolute;
+    top: 50px; /* Positions the element 50px down from the top of the nearest positioned ancestor */
+    left: 100px; /* Positions the element 100px from the left of the nearest positioned ancestor */
+}
+```
+
+- Behavior: The element is removed from the document flow and does not leave a gap where it would have been located.
+
+### 5. Sticky Positioning
+A sticky positioned element toggles between relative and fixed positioning, depending on the user's scroll position. It is treated as `relative` until it crosses a specified threshold, then it is treated as `fixed`.
+
+```css
+.element {
+    position: sticky;
+    top: 0; /* Sticks the element to the top of the viewport when you reach its scroll position */
+}
+```
+
+- Behavior: The element is in the document flow but can act as fixed when the user scrolls past it. It creates a "sticky" effect.
+
+### Example Usage
+Here's an example to illustrate how these positioning schemes work:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <style>
+        .static { background: lightblue; }
+        .relative { position: relative; top: 20px; left: 20px; background: lightgreen; }
+        .fixed { position: fixed; top: 10px; right: 10px; background: lightcoral; }
+        .absolute-container { position: relative; }
+        .absolute { position: absolute; top: 20px; left: 20px; background: lightgoldenrodyellow; }
+        .sticky { position: sticky; top: 0; background: lightpink; }
+        .box { width: 100px; height: 100px; margin: 20px; }
+    </style>
+</head>
+<body>
+    <div class="box static">Static</div>
+    <div class="box relative">Relative</div>
+    <div class="box fixed">Fixed</div>
+    <div class="absolute-container" style="height: 200px;">
+        <div class="box absolute">Absolute</div>
+    </div>
+    <div class="box sticky" style="height: 1500px;">Sticky</div>
+</body>
+</html>
+```
