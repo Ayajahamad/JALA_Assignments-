@@ -1,0 +1,65 @@
+<!-- 4. Create an object "person" with properties firstname and lastname. Display these 
+properties using 2 different ways of accessing. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing Object Properties</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #personProperties {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Accessing Object Properties</h1>
+    <p>This page demonstrates two ways to access the properties of an object:</p>
+    
+    <button onclick="displayPersonProperties()">Display Person Properties</button>
+    
+    <div id="personProperties"></div>
+
+    <script>
+        // Create an object "person" with properties firstname and lastname
+        const person = {
+            firstname: "John",
+            lastname: "Doe"
+        };
+
+        // Function to display the properties of the person object
+        function displayPersonProperties() {
+            // Access properties using dot notation
+            const firstnameDot = person.firstname;
+            const lastnameDot = person.lastname;
+
+            // Access properties using bracket notation
+            const firstnameBracket = person["firstname"];
+            const lastnameBracket = person["lastname"];
+
+            // Display the properties
+            const displayDiv = document.getElementById("personProperties");
+            displayDiv.innerHTML = `
+                <p><strong>Using Dot Notation:</strong></p>
+                <p>Firstname: ${firstnameDot}</p>
+                <p>Lastname: ${lastnameDot}</p>
+                <p><strong>Using Bracket Notation:</strong></p>
+                <p>Firstname: ${firstnameBracket}</p>
+                <p>Lastname: ${lastnameBracket}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

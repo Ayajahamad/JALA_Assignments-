@@ -1,0 +1,46 @@
+<!-- 3. Write a program with FOR/IN loop. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For/In Loop Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #fruitProperties {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>For/In Loop Example</h1>
+    <p>Click the button below to display the properties of a fruit object:</p>
+    <button onclick="displayFruitProperties()">Show Fruit Properties</button>
+    
+    <div id="fruitProperties"></div>
+
+    <script>
+        // Create an object representing a fruit
+        const fruit = {
+            name: "Mango",
+            color: "Yellow",
+            weight: "200 grams",
+            taste: "Sweet"
+        };
+
+        // Function to display the properties of the fruit object
+        function displayFruitProperties() {
+            let properties = "";
+            for (let key in fruit) {
+                properties += key + ": " + fruit[key] + "<br>";
+            }
+            document.getElementById("fruitProperties").innerHTML = properties;
+        }
+    </script>
+</body>
+</html>

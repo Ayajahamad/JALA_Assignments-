@@ -1,0 +1,54 @@
+<!-- 6. Use strict mode in your program and understand why variable not declared causes 
+error. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Mode Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #strictModeExample {
+            margin-top: 20px;
+            font-weight: bold;
+            color: red;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Strict Mode Example</h1>
+    <p>This page demonstrates the use of "strict mode" in JavaScript and shows why using a variable without declaring it causes an error.</p>
+    
+    <button onclick="showStrictModeExample()">Show Strict Mode Example</button>
+    
+    <div id="strictModeExample"></div>
+
+    <script>
+        function showStrictModeExample() {
+            'use strict'; // Enable strict mode
+
+            let exampleOutput;
+
+            try {
+                // Attempt to use a variable without declaring it
+                undeclaredVariable = "This will cause an error in strict mode!";
+            } catch (error) {
+                exampleOutput = "Error: " + error.message;
+            }
+
+            // Display the example output
+            document.getElementById("strictModeExample").innerHTML = exampleOutput;
+        }
+    </script>
+</body>
+</html>
